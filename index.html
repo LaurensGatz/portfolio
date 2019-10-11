@@ -14,21 +14,21 @@
             <div class="header-text">
                 <ul class="links">
                    <li><a href=mailto:laurens.gatz@gmail.com"?
-                       subject="subject text"><i class="fas fa-envelope"></i>
-                        </a></li>
+                       subject="subject text"><i class="fas fa-envelope"></i></a></li> 
                    <li><a href="file:///home/laurens/learning-markup/Exercises/css-exercises/challenge-multipage-application/resume.html">Resume</a></li>
                 </ul>
-                <div class="animation"></div>
-                <div class="photo"><img class="headshot" src="resources/images/headshot.png" alt="Me"></div>
-            </div>
+            </div>    
+            <div class="animation"></div>
+            <div class="photo"><img class="headshot" src="resources/images/headshot.png" alt="Me"></div>
             <div class="header-subtext">
-                <p> Hello,<br/> my name is Laurens.
+                <p> Hello,<br/> my name is Laurens Gatz.
                 I'm a junior webdeveloper @ BeCode.
-                I'll be posting my work here.<br/>
-                So take a look and enjoy!</p>
+                Welcome to my portfolio, <br/>
+                take a look around and enjoy!</p>
+            </div>
         </div>
         <div class="main-content">
-            <div class="work">
+            <div class="workk">
                 <div class="blockspace1">
                     <div class="rotate">
                         <a href="https://laurensgatz.github.io/learning-markup/Exercises/css-exercises/challenge-flexing-your-css-muscles/index.html">
@@ -53,7 +53,7 @@
                     </div>
                 </div>
             </div>
-            <div class="work">
+            <div class="workk">
                 <div class="blockspace3">
                     <div class="rotate">
                         <a href="https://laurensgatz.github.io/learning-markup/Exercises/css-exercises/challenge-multi-pager/index.html">
@@ -96,41 +96,42 @@
                                 </a>
                             </li>
                         </ul>
-            </div>            
+            </div>
+            <div class="animation2"></div>            
         </div>
     </div>
 </body>
 <style> 
-        .animation {
-          width: 50px;
-          height: 50px;
+        
+        .animation2 {
+            width: 25px;
+          height: 25px;
+          margin-bottom: 20px;
           border-radius: 20%;
           background-color: #4db4e0;
           position: relative;
-          -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+          -webkit-animation-name: orbit; /* Safari 4.0 - 8.0 */
           -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
           -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
-          animation-name: example;
-          animation-duration: 8s;
+          animation-name: orbit;
+          animation-duration: 5s;
           animation-iteration-count: infinite;
         }
+
+        @keyframes orbit {
         
-        /* Safari 4.0 - 8.0 */
-        @-webkit-keyframes example {
-          0%   {background-color:#e4ae7c; left:150px; top:0px;}
-          25%  {background-color:#f1e767; left:1090px; top:0px;}
-          50%  {background-color:#4fbbe9d8; left:1090px; top:2060px;}
-          75%  {background-color:#76b990; left:150px; top:2060px;}
-          100% {background-color:#fac695; left:150px; top:0px;}
+            0% {
+                transform: rotateZ(0deg); }
+            25%{
+                background-color: #e4ae7c;}
+            50% {
+                background-color: #f1e767;}
+            75% {
+                background-color: #76b990;}
+            100% {
+                transform: rotateZ(-360deg);
+                background-color: #fac695;} 
         }
-        
-        /* Standard syntax */
-        @keyframes example {
-          0%   {background-color:#e4ae7c; left:150px; top:0px;}
-          25%  {background-color:#f1e767; left:1090px; top:0px;}
-          50%  {background-color:#4fbbe9d8; left:1090px; top:2060px;}
-          75%  {background-color:#76b990; left:150px; top:2060px;}
-          100% {background-color:#fac695; left:150px; top:0px;}
-        }
-        </style>
+</style>
+
 </html>

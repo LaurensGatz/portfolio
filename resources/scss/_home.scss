@@ -1,4 +1,4 @@
-$base-color: #504e50c7;
+$base-color: #3f3e3fde;
 
 * {
     margin: 0;
@@ -12,17 +12,24 @@ p {
     text-align: center;
 }
 
+b {
+    font-family: 'Courier New', Courier, monospace;
+}
+
 img {
     max-width: 100%;
     height: auto;
   }
 
-.pagewrapper {
-    width: 100%;
-    height: auto;
-    
+.page-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
+
+
 /* header */
+
 .headshot {
     border-radius: 10%;
     box-shadow: 3px 3px rgba(27, 27, 27, 0.384);
@@ -32,6 +39,7 @@ img {
     display: flex;
     justify-content: center;
     padding: 5px;
+    padding-top: 20px;
 }
 
 .links {
@@ -39,7 +47,9 @@ img {
     justify-content: space-between;
     list-style-type: none;
     border-bottom: 3px solid $base-color;
-    margin: 40px 150px 0px 150px;
+    padding-top: 40px;
+    margin: auto;
+    width: 76%;
 }
 
 .links li {
@@ -69,7 +79,7 @@ img {
     display: flex;
     justify-content: center;
     padding: 40px;
-    width: 600px;
+    max-width: 50%;
     margin: auto;
 }
 /* Main */
@@ -82,7 +92,7 @@ img {
 
 
 .blockspace {
-    width: 300px;
+    width: 35%;
     height: 400px;
     background: #eeeeee;
     background: -moz-linear-gradient(top,  #eeeeee 0%, #cccccc 100%);
@@ -104,7 +114,7 @@ img {
 }
 
 .blockspace1 {
-    width: 400px;
+    width: 50%;
     height: 400px;
     background: #b0d4e3;
     background: -moz-linear-gradient(top,  #b0d4e3 0%, #88bacf 100%);
@@ -120,10 +130,11 @@ img {
 }
 
 .blockspace1 img {
-    height: 150px;
+    max-height: 150px;
     width: auto;
-    box-shadow: 3px 3px rgba(27, 27, 27, 0.384);
+    box-shadow: 3px 3px 3px 3px rgba(27, 27, 27, 0.384);
     border-radius: 10%;
+    padding: 5px;
 }
 
 .ex1 {
@@ -132,7 +143,7 @@ img {
 }
 
 .blockspace2 {
-    width: 400px;
+    width: 50%;
     height: 400px;
     background: #f1e767;
     background: -moz-linear-gradient(top,  #f1e767 0%, #feb645 100%);
@@ -148,10 +159,11 @@ img {
 }
 
 .blockspace2 img {
-    height: 150px;
+    max-height: 150px;
     width: auto;
-    box-shadow: 3px 3px rgba(27, 27, 27, 0.384);
+    box-shadow: 3px 3px 3px 3px rgba(27, 27, 27, 0.384);
     border-radius: 10%;
+    padding: 5px;
 }
 
 .ex2 {
@@ -160,7 +172,7 @@ img {
 }
 
 .blockspace3 {
-    width: 400px;
+    width: 50%;
     height: 400px;
     background: #b5bdc8;
     background: -moz-linear-gradient(top,  #b5bdc8 0%, #828c95 36%, #28343b 100%);
@@ -176,10 +188,11 @@ img {
 }
 
 .blockspace3 img {
-    height: 150px;
+    max-height: 150px;
     width: auto;
-    box-shadow: 3px 3px rgba(27, 27, 27, 0.384);
+    box-shadow: 3px 3px 3px 3px rgba(27, 27, 27, 0.384);
     border-radius: 10%;
+    padding: 5px;
 }
 
 .ex3 {
@@ -188,7 +201,7 @@ img {
 }
 
 .blockspace4 { 
-    width: 400px;
+    width: 50%;
     height: 400px;
     background: #fac695;
     background: -moz-linear-gradient(top,  #fac695 0%, #f5ab66 47%, #ef8d31 100%);
@@ -204,10 +217,11 @@ img {
 }
 
 .blockspace4 img {
-    height: 150px;
+    max-height: 150px;
     width: auto;
-    box-shadow: 3px 3px rgba(27, 27, 27, 0.384);
+    box-shadow: 3px 3px 3px 3px rgba(27, 27, 27, 0.384);
     border-radius: 10%;
+    padding: 5px;
 }
 
 .ex4 {
@@ -241,11 +255,15 @@ img {
 .work {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    width: 85%
 }
 
-
-.work i {
-    color: $base-color;
+.workk{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 85%
 }
 
 h1 {
@@ -271,4 +289,46 @@ h1 {
 
 .logolist i:hover {
     color: #f1e767;
+}
+
+@media screen and (max-width: 992px) {
+    .blockspace {
+        width: 35%;
+        height: 300px;
+    }
+
+    .blockspace1, .blockspace2, .blockspace3, .blockspace4 {
+            width: 50%;
+            height: 300px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .work {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .workk {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .blockspace {
+        width: 90%;
+        height: 250px;
+    }
+
+    .blockspace1, .blockspace2, .blockspace3, .blockspace4 {
+        width: 90%;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .main-content {
+       margin: 40px 5% 0px 5%;
+    }
 }
